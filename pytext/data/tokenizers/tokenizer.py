@@ -96,8 +96,6 @@ class BERTInitialTokenizer(Tokenizer):
 
     def tokenize(self, text):
         """Tokenizes a piece of text."""
-        if self.tokenizer.do_lower_case:
-            text = self.tokenizer._run_strip_accents(text.lower())
         tokens = self.tokenizer.tokenize(text)
         end = 0
         result = []
